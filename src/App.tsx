@@ -190,7 +190,7 @@ export default function App() {
             >
               <div className="aspect-[4/5] rounded-3xl overflow-hidden relative">
                 <img 
-                  src="/photo1.jpg" 
+                  src="photo1.jpg" 
                   alt="Aghori Vamachara Gym Owner" 
                   className="w-full h-full object-cover"
                   onError={(e) => {
@@ -248,7 +248,7 @@ export default function App() {
             {[
               { title: "Weight Training", img: "https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?q=80&w=2070&auto=format&fit=crop" },
               { title: "Cardio Training", img: "https://images.unsplash.com/photo-1538805060514-97d9cc17730c?q=80&w=2069&auto=format&fit=crop" },
-              { title: "Personal Training", img: "/photo2.jpg", fallback: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?q=80&w=2070&auto=format&fit=crop" },
+              { title: "Personal Training", img: "photo2.jpg", fallback: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?q=80&w=2070&auto=format&fit=crop" },
               { title: "Fat Loss Program", img: "https://images.unsplash.com/photo-1518611012118-696072aa579a?q=80&w=2070&auto=format&fit=crop" },
               { title: "Muscle Gain Program", img: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=2070&auto=format&fit=crop" },
               { title: "Diet Plan", img: "https://images.unsplash.com/photo-1490645935967-10de6ba17061?q=80&w=2053&auto=format&fit=crop" },
@@ -402,12 +402,12 @@ export default function App() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {[
-              { src: "/photo1.jpg", fallback: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=800&auto=format&fit=crop" },
-              { src: "/photo2.jpg", fallback: "https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?q=80&w=800&auto=format&fit=crop" },
-              { src: "/photo3.jpg", fallback: "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?q=80&w=800&auto=format&fit=crop" },
-              { src: "/photo4.jpg", fallback: "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80&w=800&auto=format&fit=crop" },
-              { src: "/photo5.jpg", fallback: "https://images.unsplash.com/photo-1526506114642-903c58d56f66?q=80&w=800&auto=format&fit=crop" },
-              { src: "/photo6.jpg", fallback: "https://images.unsplash.com/photo-1540497077202-7c8a3999166f?q=80&w=800&auto=format&fit=crop" }
+              { src: "photo1.jpg", fallback: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=800&auto=format&fit=crop" },
+              { src: "photo2.jpg", fallback: "https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?q=80&w=800&auto=format&fit=crop" },
+              { src: "photo3.jpg", fallback: "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?q=80&w=800&auto=format&fit=crop" },
+              { src: "photo4.jpg", fallback: "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80&w=800&auto=format&fit=crop" },
+              { src: "photo5.jpg", fallback: "https://images.unsplash.com/photo-1526506114642-903c58d56f66?q=80&w=800&auto=format&fit=crop" },
+              { src: "photo6.jpg", fallback: "https://images.unsplash.com/photo-1540497077202-7c8a3999166f?q=80&w=800&auto=format&fit=crop" }
             ].map((img, idx) => (
               <motion.div 
                 key={idx}
