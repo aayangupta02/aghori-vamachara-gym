@@ -116,7 +116,7 @@ export default function App() {
       <section id="home" className="relative h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img 
-            src="/gym1.jpg.jpeg" 
+            src="/gym1.jpg" 
             alt="Gym Background" 
             className="w-full h-full object-cover opacity-50"
             onError={(e) => {
@@ -204,7 +204,7 @@ export default function App() {
             >
               <div className="aspect-[4/5] rounded-3xl overflow-hidden relative">
                 <img 
-                  src="/gym2.jpg.jpeg" 
+                  src="/gym2.jpg" 
                   alt="Aghori Vamachara Gym Training" 
                   className="w-full h-full object-cover"
                   onError={(e) => {
