@@ -316,7 +316,7 @@ export default function App() {
             >
               <h3 className="text-2xl font-bold uppercase mb-2">1 Month</h3>
               <div className="flex items-baseline gap-2 mb-6">
-                <span className="text-5xl font-display">₹1000</span>
+                <span className="text-5xl font-display">₹999</span>
               </div>
               <ul className="space-y-4 mb-8 flex-grow">
                 {['Full gym access', 'Cardio & Weights', 'Locker room access'].map((feature, i) => (
@@ -327,7 +327,7 @@ export default function App() {
                 ))}
               </ul>
               <a 
-                href={`https://wa.me/${WHATSAPP_NUMBER}?text=I'm interested in the 1 Month membership plan (₹1000).`}
+                href={`https://wa.me/${WHATSAPP_NUMBER}?text=I'm interested in the 1 Month membership plan (₹999).`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full py-4 rounded-xl border border-white/20 hover:bg-white hover:text-black font-bold uppercase tracking-wider transition-colors text-center"
