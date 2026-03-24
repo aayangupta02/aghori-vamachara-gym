@@ -15,15 +15,16 @@ import {
 } from 'lucide-react';
 import { useState, useEffect } from 'react';
 
-const gym1 = '/gym1.jpg';
-const gym2 = '/gym2.jpg';
-const gym3 = '/gym3.jpg';
-const gym4 = '/gym4.jpg';
-const gym5 = '/gym5.jpg';
-const gym6 = '/gym6.jpg';
-const muscle = '/muscle.jpg';
+import gym1 from '../public/gym1.jpg';
+import gym2 from '../public/gym2.jpg';
+import gym3 from '../public/gym3.jpg';
+import gym4 from '../public/gym4.jpg';
+import gym5 from '../public/gym5.jpg';
+import gym6 from '../public/gym6.jpg';
+import gym7 from '../public/gym7.jpg';
+import muscle from '../public/muscle.jpg';
 
-// Using absolute paths for the public folder
+// Using imported paths for the gym photos to ensure Vite bundles them for Vercel
 const gymPhotos = [
   gym1,
   gym2,
@@ -31,6 +32,7 @@ const gymPhotos = [
   gym4,
   gym5,
   gym6,
+  gym7,
   muscle
 ];
 
@@ -127,9 +129,6 @@ export default function App() {
             src={gym1} 
             alt="Gym Background" 
             className="w-full h-full object-cover opacity-50"
-            onError={(e) => {
-              e.currentTarget.src = "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=2070&auto=format&fit=crop";
-            }}
             referrerPolicy="no-referrer"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent" />
@@ -215,9 +214,6 @@ export default function App() {
                   src={gym2} 
                   alt="Aghori Vamachara Gym Training" 
                   className="w-full h-full object-cover"
-                  onError={(e) => {
-                    e.currentTarget.src = "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?q=80&w=2070&auto=format&fit=crop";
-                  }}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent" />
               </div>
@@ -287,9 +283,6 @@ export default function App() {
                   src={service.img} 
                   alt={service.title} 
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                  onError={(e) => {
-                    if (service.fallback) e.currentTarget.src = service.fallback;
-                  }}
                   referrerPolicy="no-referrer"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent opacity-80 group-hover:opacity-90 transition-opacity" />
@@ -437,9 +430,6 @@ export default function App() {
                   alt={`Gallery ${idx + 1}`} 
                   loading="lazy"
                   className="w-full h-full object-cover hover:scale-110 transition-transform duration-500 cursor-pointer"
-                  onError={(e) => {
-                    e.currentTarget.src = `https://images.unsplash.com/photo-${1534438327276 + idx}-14e5300c3a48?q=80&w=800&auto=format&fit=crop`;
-                  }}
                   referrerPolicy="no-referrer"
                 />
               </motion.div>
