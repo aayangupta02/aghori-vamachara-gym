@@ -23,7 +23,10 @@ const gymPhotos = [
   "/gym3.jpg",
   "/gym4.jpg",
   "/gym5.jpg",
-  "/gym6.jpg"
+  "/gym6.jpg",
+  "/gym7.jpg",
+  "/gym8.jpg",
+  "/gym9.jpg"
 ];
 
 const WHATSAPP_NUMBER = "918789205796";
