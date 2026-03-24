@@ -16,6 +16,7 @@ import {
 import { useState, useEffect } from 'react';
 
 // Using public folder paths for the new gym photos
+// Updated gallery configuration
 const gymPhotos = [
   "/gym1.jpg.jpeg",
   "/gym2.jpg.jpeg",
