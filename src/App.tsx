@@ -18,12 +18,12 @@ import { useState, useEffect } from 'react';
 // Using public folder paths for the new gym photos
 // Updated gallery configuration
 const gymPhotos = [
-  "/gym1.jpg.jpeg",
-  "/gym2.jpg.jpeg",
-  "/gym3.jpg.jpeg",
-  "/gym4.jpg.jpeg",
-  "/gym5.jpg.jpeg",
-  "/gym6.jpg.jpeg"
+  "/gym1.jpg",
+  "/gym2.jpg",
+  "/gym3.jpg",
+  "/gym4.jpg",
+  "/gym5.jpg",
+  "/gym6.jpg"
 ];
 
 const WHATSAPP_NUMBER = "918789205796";
