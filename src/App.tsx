@@ -15,16 +15,15 @@ import {
 } from 'lucide-react';
 import { useState, useEffect } from 'react';
 
-import gym1 from '../public/gym1.jpg';
-import gym2 from '../public/gym2.jpg';
-import gym3 from '../public/gym3.jpg';
-import gym4 from '../public/gym4.jpg';
-import gym5 from '../public/gym5.jpg';
-import gym6 from '../public/gym6.jpg';
-import gym7 from '../public/gym7.jpg';
-import muscle from '../public/muscle.jpg';
+const gym1 = '/gym1.jpg';
+const gym2 = '/gym2.jpg';
+const gym3 = '/gym3.jpg';
+const gym4 = '/gym4.jpg';
+const gym5 = '/gym5.jpg';
+const gym6 = '/gym6.jpg';
+const muscle = '/muscle.jpg';
 
-// Using imported paths for the gym photos to ensure Vite bundles them for Vercel
+// Using absolute paths for the public folder
 const gymPhotos = [
   gym1,
   gym2,
@@ -32,9 +31,7 @@ const gymPhotos = [
   gym4,
   gym5,
   gym6,
-  gym7,
-  gym1,
-  gym2
+  muscle
 ];
 
 const WHATSAPP_NUMBER = "918789205796";
@@ -438,6 +435,7 @@ export default function App() {
                 <img 
                   src={img} 
                   alt={`Gallery ${idx + 1}`} 
+                  loading="lazy"
                   className="w-full h-full object-cover hover:scale-110 transition-transform duration-500 cursor-pointer"
                   onError={(e) => {
                     e.currentTarget.src = `https://images.unsplash.com/photo-${1534438327276 + idx}-14e5300c3a48?q=80&w=800&auto=format&fit=crop`;
