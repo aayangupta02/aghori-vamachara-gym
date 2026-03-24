@@ -18,12 +18,12 @@ import { useState, useEffect } from 'react';
 // Using public folder paths for the new gym photos
 // Updated gallery configuration
 const gymPhotos = [
-  "/gym1.jpg.jpeg",
-  "/gym2.jpg.jpeg",
-  "/gym3.jpg.jpeg",
-  "/gym4.jpg.jpeg",
-  "/gym5.jpg.jpeg",
-  "/gym6.jpg.jpeg"
+  "/gym1.jpg",
+  "/gym2.jpg",
+  "/gym3.jpg",
+  "/gym4.jpg",
+  "/gym5.jpg",
+  "/gym6.jpg"
 ];
 
 const WHATSAPP_NUMBER = "918789205796";
@@ -264,7 +264,7 @@ export default function App() {
               { title: "Cardio Training", img: "https://images.unsplash.com/photo-1518611012118-696072aa579a?q=80&w=2070&auto=format&fit=crop", fallback: "" },
               { title: "Personal Training", img: "https://images.unsplash.com/photo-1594381898411-846e7d193883?q=80&w=2070&auto=format&fit=crop", fallback: "" },
               { title: "Fat Loss Program", img: "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80&w=2070&auto=format&fit=crop", fallback: "" },
-              { title: "Muscle Gain Program", img: "/muscle.jpg.jpeg", fallback: "https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?q=80&w=2070&auto=format&fit=crop" },
+              { title: "Muscle Gain Program", img: "/muscle.jpg", fallback: "https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?q=80&w=2070&auto=format&fit=crop" },
               { title: "Diet Plan", img: "https://images.unsplash.com/photo-1490645935967-10de6ba17061?q=80&w=2070&auto=format&fit=crop", fallback: "" },
             ].map((service, idx) => (
               <motion.div 
