@@ -1,1 +1,1 @@
-This folder is for public assets like images. 
+This folder is for public assets like images.
