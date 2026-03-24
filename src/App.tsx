@@ -15,13 +15,15 @@ import {
 } from 'lucide-react';
 import { useState, useEffect } from 'react';
 
-// Import images directly for Vite to handle paths
-import photo1 from "./photo1.jpg";
-import photo2 from "./photo2.jpg";
-import photo3 from "./photo3.jpg";
-import photo4 from "./photo4.jpg";
-import photo5 from "./photo5.jpg";
-import photo6 from "./photo6.jpg";
+// Using public folder paths for the new gym photos
+const gymPhotos = [
+  "/gym1.jpg.jpeg",
+  "/gym2.jpg.jpeg",
+  "/gym3.jpg.jpeg",
+  "/gym4.jpg.jpeg",
+  "/gym5.jpg.jpeg",
+  "/gym6.jpg.jpeg"
+];
 
 const WHATSAPP_NUMBER = "918789205796";
 
@@ -113,9 +115,12 @@ export default function App() {
       <section id="home" className="relative h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img 
-            src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=2070&auto=format&fit=crop" 
+            src="/gym1.jpg.jpeg" 
             alt="Gym Background" 
-            className="w-full h-full object-cover opacity-40"
+            className="w-full h-full object-cover opacity-50"
+            onError={(e) => {
+              e.currentTarget.src = "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=2070&auto=format&fit=crop";
+            }}
             referrerPolicy="no-referrer"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent" />
@@ -198,8 +203,8 @@ export default function App() {
             >
               <div className="aspect-[4/5] rounded-3xl overflow-hidden relative">
                 <img 
-                  src={photo1} 
-                  alt="Aghori Vamachara Gym Owner" 
+                  src="/gym2.jpg.jpeg" 
+                  alt="Aghori Vamachara Gym Training" 
                   className="w-full h-full object-cover"
                   onError={(e) => {
                     e.currentTarget.src = "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?q=80&w=2070&auto=format&fit=crop";
@@ -254,12 +259,12 @@ export default function App() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
-              { title: "Weight Training", img: "https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?q=80&w=2070&auto=format&fit=crop" },
-              { title: "Cardio Training", img: "https://images.unsplash.com/photo-1538805060514-97d9cc17730c?q=80&w=2069&auto=format&fit=crop" },
-              { title: "Personal Training", img: photo2, fallback: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?q=80&w=2070&auto=format&fit=crop" },
-              { title: "Fat Loss Program", img: "https://images.unsplash.com/photo-1518611012118-696072aa579a?q=80&w=2070&auto=format&fit=crop" },
-              { title: "Muscle Gain Program", img: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=2070&auto=format&fit=crop" },
-              { title: "Diet Plan", img: "https://images.unsplash.com/photo-1490645935967-10de6ba17061?q=80&w=2053&auto=format&fit=crop" },
+              { title: "Weight Training", img: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=2070&auto=format&fit=crop", fallback: "" },
+              { title: "Cardio Training", img: "https://images.unsplash.com/photo-1518611012118-696072aa579a?q=80&w=2070&auto=format&fit=crop", fallback: "" },
+              { title: "Personal Training", img: "https://images.unsplash.com/photo-1594381898411-846e7d193883?q=80&w=2070&auto=format&fit=crop", fallback: "" },
+              { title: "Fat Loss Program", img: "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80&w=2070&auto=format&fit=crop", fallback: "" },
+              { title: "Muscle Gain Program", img: "/muscle.jpg.jpeg", fallback: "https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?q=80&w=2070&auto=format&fit=crop" },
+              { title: "Diet Plan", img: "https://images.unsplash.com/photo-1490645935967-10de6ba17061?q=80&w=2070&auto=format&fit=crop", fallback: "" },
             ].map((service, idx) => (
               <motion.div 
                 key={idx}
@@ -409,14 +414,7 @@ export default function App() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {[
-              { src: photo1, fallback: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=800&auto=format&fit=crop" },
-              { src: photo2, fallback: "https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?q=80&w=800&auto=format&fit=crop" },
-              { src: photo3, fallback: "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?q=80&w=800&auto=format&fit=crop" },
-              { src: photo4, fallback: "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80&w=800&auto=format&fit=crop" },
-              { src: photo5, fallback: "https://images.unsplash.com/photo-1526506114642-903c58d56f66?q=80&w=800&auto=format&fit=crop" },
-              { src: photo6, fallback: "https://images.unsplash.com/photo-1540497077202-7c8a3999166f?q=80&w=800&auto=format&fit=crop" }
-            ].map((img, idx) => (
+            {gymPhotos.map((img, idx) => (
               <motion.div 
                 key={idx}
                 initial={{ opacity: 0, scale: 0.9 }}
@@ -426,11 +424,11 @@ export default function App() {
                 className="overflow-hidden rounded-2xl h-[500px]"
               >
                 <img 
-                  src={img.src} 
+                  src={img} 
                   alt={`Gallery ${idx + 1}`} 
                   className="w-full h-full object-cover hover:scale-110 transition-transform duration-500 cursor-pointer"
                   onError={(e) => {
-                    if (img.fallback) e.currentTarget.src = img.fallback;
+                    e.currentTarget.src = `https://images.unsplash.com/photo-${1534438327276 + idx}-14e5300c3a48?q=80&w=800&auto=format&fit=crop`;
                   }}
                   referrerPolicy="no-referrer"
                 />
