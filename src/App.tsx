@@ -15,18 +15,26 @@ import {
 } from 'lucide-react';
 import { useState, useEffect } from 'react';
 
-// Using public folder paths for the new gym photos
-// Updated gallery configuration
+import gym1 from '../public/gym1.jpg';
+import gym2 from '../public/gym2.jpg';
+import gym3 from '../public/gym3.jpg';
+import gym4 from '../public/gym4.jpg';
+import gym5 from '../public/gym5.jpg';
+import gym6 from '../public/gym6.jpg';
+import gym7 from '../public/gym7.jpg';
+import muscle from '../public/muscle.jpg';
+
+// Using imported paths for the gym photos to ensure Vite bundles them for Vercel
 const gymPhotos = [
-  "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=800&auto=format&fit=crop",
-  "https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?q=80&w=800&auto=format&fit=crop",
-  "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80&w=800&auto=format&fit=crop",
-  "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?q=80&w=800&auto=format&fit=crop",
-  "https://images.unsplash.com/photo-1540497077202-7c8a3999166f?q=80&w=800&auto=format&fit=crop",
-  "https://images.unsplash.com/photo-1596357395217-80de13130e92?q=80&w=800&auto=format&fit=crop",
-  "https://images.unsplash.com/photo-1599058917212-d750089bc07e?q=80&w=800&auto=format&fit=crop",
-  "https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?q=80&w=800&auto=format&fit=crop",
-  "https://images.unsplash.com/photo-1574680096145-d05b474e2155?q=80&w=800&auto=format&fit=crop"
+  gym1,
+  gym2,
+  gym3,
+  gym4,
+  gym5,
+  gym6,
+  gym7,
+  gym1,
+  gym2
 ];
 
 const WHATSAPP_NUMBER = "918789205796";
@@ -119,7 +127,7 @@ export default function App() {
       <section id="home" className="relative h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img 
-            src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=2070&auto=format&fit=crop" 
+            src={gym1} 
             alt="Gym Background" 
             className="w-full h-full object-cover opacity-50"
             onError={(e) => {
@@ -207,7 +215,7 @@ export default function App() {
             >
               <div className="aspect-[4/5] rounded-3xl overflow-hidden relative">
                 <img 
-                  src="https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?q=80&w=2070&auto=format&fit=crop" 
+                  src={gym2} 
                   alt="Aghori Vamachara Gym Training" 
                   className="w-full h-full object-cover"
                   onError={(e) => {
@@ -263,12 +271,12 @@ export default function App() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
-              { title: "Weight Training", img: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=2070&auto=format&fit=crop", fallback: "" },
-              { title: "Cardio Training", img: "https://images.unsplash.com/photo-1518611012118-696072aa579a?q=80&w=2070&auto=format&fit=crop", fallback: "" },
-              { title: "Personal Training", img: "https://images.unsplash.com/photo-1594381898411-846e7d193883?q=80&w=2070&auto=format&fit=crop", fallback: "" },
-              { title: "Fat Loss Program", img: "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80&w=2070&auto=format&fit=crop", fallback: "" },
-              { title: "Muscle Gain Program", img: "https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?q=80&w=2070&auto=format&fit=crop", fallback: "" },
-              { title: "Diet Plan", img: "https://images.unsplash.com/photo-1490645935967-10de6ba17061?q=80&w=2070&auto=format&fit=crop", fallback: "" },
+              { title: "Weight Training", img: gym1, fallback: "" },
+              { title: "Cardio Training", img: gym3, fallback: "" },
+              { title: "Personal Training", img: gym4, fallback: "" },
+              { title: "Fat Loss Program", img: gym5, fallback: "" },
+              { title: "Muscle Gain Program", img: muscle, fallback: "" },
+              { title: "Diet Plan", img: gym2, fallback: "" },
             ].map((service, idx) => (
               <motion.div 
                 key={idx}
