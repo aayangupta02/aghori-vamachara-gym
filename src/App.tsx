@@ -208,7 +208,7 @@ export default function App() {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent" />
               </div>
               <div className="absolute -bottom-8 -right-8 bg-red-600 p-8 rounded-3xl hidden md:block">
-                <h3 className="font-display text-5xl mb-2">10+</h3>
+                <h3 className="font-display text-5xl mb-2">15+</h3>
                 <p className="text-sm font-medium uppercase tracking-wider">Years of<br/>Experience</p>
               </div>
             </motion.div>
