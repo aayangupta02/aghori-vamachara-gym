@@ -19,7 +19,7 @@ const heroImg = 'https://lh3.googleusercontent.com/d/15Ad0K_9SkuqzJ8oYDTIJT42duE
 const gym1 = 'https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=1470&auto=format&fit=crop';
 const gym2 = 'https://lh3.googleusercontent.com/d/1dTn_lOiuEH4BqwaA0FmfwwywQAam3ywa';
 const gym3 = 'https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80&w=1470&auto=format&fit=crop';
-const gym4 = 'https://lh3.googleusercontent.com/d/17ZVCeNGoZk2SxoLDaWVsP8anc3bfOMDj';
+const gym4 = 'https://lh3.googleusercontent.com/d/1SYIpD55Nn9dMlOLZeJYuDbTFz1Om8O1i';
 const gym5 = 'https://images.unsplash.com/photo-1540497077202-7c8a3999166f?q=80&w=1470&auto=format&fit=crop';
 const gym6 = 'https://images.unsplash.com/photo-1574680096145-d05b474e2155?q=80&w=1470&auto=format&fit=crop';
 const gym7 = 'https://images.unsplash.com/photo-1558611848-73f7eb4001a1?q=80&w=1471&auto=format&fit=crop';
@@ -29,7 +29,7 @@ const dietImg = 'https://images.unsplash.com/photo-1512621776951-a57141f2eefd?q=
 const fatLossImg = 'https://images.unsplash.com/photo-1517838277536-f5f99be501cd?q=80&w=1470&auto=format&fit=crop';
 
 // Premium dark-themed gallery images (Verified Gym Images)
-const gal1 = 'https://lh3.googleusercontent.com/d/19niS_Xl6aFiP5-vf3d8R5NuwMssu5-hm';
+const gal1 = 'https://lh3.googleusercontent.com/d/1HQDkN2GewPwxi39VUe8rLNRmq36AoH3D';
 const gal2 = 'https://lh3.googleusercontent.com/d/18dqPKmWFpaIySIHq9bVnSXbjnsJmoaWZ';
 const gal3 = 'https://lh3.googleusercontent.com/d/1eA3fRd72cLSCfDiHsiKbEcYZQQUxHMk1';
 const gal4 = 'https://lh3.googleusercontent.com/d/1h7xDX0epjSkb5KxBeDuSlEqizNqir9vY';
