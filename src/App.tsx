@@ -15,23 +15,24 @@ import {
 } from 'lucide-react';
 import { useState, useEffect } from 'react';
 
+const heroImg = 'https://lh3.googleusercontent.com/d/15Ad0K_9SkuqzJ8oYDTIJT42duEJPYbNF';
 const gym1 = 'https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=1470&auto=format&fit=crop';
-const gym2 = 'https://images.unsplash.com/photo-1599058917212-d750089bc07e?q=80&w=1469&auto=format&fit=crop';
+const gym2 = 'https://lh3.googleusercontent.com/d/1dTn_lOiuEH4BqwaA0FmfwwywQAam3ywa';
 const gym3 = 'https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80&w=1470&auto=format&fit=crop';
-const gym4 = 'https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?q=80&w=1470&auto=format&fit=crop';
+const gym4 = 'https://lh3.googleusercontent.com/d/17ZVCeNGoZk2SxoLDaWVsP8anc3bfOMDj';
 const gym5 = 'https://images.unsplash.com/photo-1540497077202-7c8a3999166f?q=80&w=1470&auto=format&fit=crop';
 const gym6 = 'https://images.unsplash.com/photo-1574680096145-d05b474e2155?q=80&w=1470&auto=format&fit=crop';
 const gym7 = 'https://images.unsplash.com/photo-1558611848-73f7eb4001a1?q=80&w=1471&auto=format&fit=crop';
-const muscle = 'https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?q=80&w=1470&auto=format&fit=crop';
+const muscle = 'https://lh3.googleusercontent.com/d/1RMdtfRPw2ltGm7g103cm9jGJxFCT4uze';
 const gym8 = 'https://images.unsplash.com/photo-1576678927484-cc907957088c?q=80&w=1470&auto=format&fit=crop';
 const dietImg = 'https://images.unsplash.com/photo-1512621776951-a57141f2eefd?q=80&w=1470&auto=format&fit=crop';
 const fatLossImg = 'https://images.unsplash.com/photo-1517838277536-f5f99be501cd?q=80&w=1470&auto=format&fit=crop';
 
 // Premium dark-themed gallery images (Verified Gym Images)
-const gal1 = 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?q=80&w=1470&auto=format&fit=crop';
-const gal2 = 'https://images.unsplash.com/photo-1554244933-d876deb6b2ff?q=80&w=1470&auto=format&fit=crop';
-const gal3 = 'https://images.unsplash.com/photo-1596357395217-80de13130e92?q=80&w=1471&auto=format&fit=crop';
-const gal4 = 'https://images.unsplash.com/photo-1518611012118-696072aa579a?q=80&w=1470&auto=format&fit=crop';
+const gal1 = 'https://lh3.googleusercontent.com/d/19niS_Xl6aFiP5-vf3d8R5NuwMssu5-hm';
+const gal2 = 'https://lh3.googleusercontent.com/d/18dqPKmWFpaIySIHq9bVnSXbjnsJmoaWZ';
+const gal3 = 'https://lh3.googleusercontent.com/d/1eA3fRd72cLSCfDiHsiKbEcYZQQUxHMk1';
+const gal4 = 'https://lh3.googleusercontent.com/d/1h7xDX0epjSkb5KxBeDuSlEqizNqir9vY';
 const gal5 = 'https://images.unsplash.com/photo-1601422407692-ec4eeec1d9b3?q=80&w=1470&auto=format&fit=crop';
 const gal6 = 'https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?q=80&w=1470&auto=format&fit=crop';
 
@@ -135,7 +136,7 @@ export default function App() {
       <section id="home" className="relative h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img 
-            src={gym1} 
+            src={heroImg} 
             alt="Gym Background" 
             className="w-full h-full object-cover opacity-50"
             referrerPolicy="no-referrer"
@@ -223,6 +224,7 @@ export default function App() {
                   src={gym2} 
                   alt="Aghori Vamachara Gym Training" 
                   className="w-full h-full object-cover"
+                  referrerPolicy="no-referrer"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent" />
               </div>
@@ -275,9 +277,9 @@ export default function App() {
             {[
               { title: "Weight Training", img: gym1, fallback: "" },
               { title: "Cardio Training", img: gym3, fallback: "" },
-              { title: "Personal Training", img: gym4, fallback: "" },
+              { title: "Personal Training", img: gym4, fallback: "", position: "object-[center_25%]" },
               { title: "Fat Loss Program", img: fatLossImg, fallback: "" },
-              { title: "Muscle Gain Program", img: muscle, fallback: "" },
+              { title: "Muscle Gain Program", img: muscle, fallback: "", position: "object-[center_25%]" },
               { title: "Diet Plan", img: dietImg, fallback: "" },
             ].map((service, idx) => (
               <motion.div 
@@ -291,7 +293,7 @@ export default function App() {
                 <img 
                   src={service.img} 
                   alt={service.title} 
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  className={`w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 ${service.position || 'object-center'}`}
                   referrerPolicy="no-referrer"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent opacity-80 group-hover:opacity-90 transition-opacity" />
@@ -438,7 +440,7 @@ export default function App() {
                   src={img} 
                   alt={`Gallery ${idx + 1}`} 
                   loading="lazy"
-                  className="w-full h-full object-cover hover:scale-110 transition-transform duration-500 cursor-pointer"
+                  className="w-full h-full object-cover object-top hover:scale-110 transition-transform duration-500 cursor-pointer"
                   referrerPolicy="no-referrer"
                 />
               </motion.div>
