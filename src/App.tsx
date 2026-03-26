@@ -3,7 +3,7 @@ import {
   Dumbbell, 
   Phone, 
   MapPin, 
-  Instagram, 
+  Instagram,
   CheckCircle2, 
   ArrowRight,
   Menu,
@@ -15,25 +15,34 @@ import {
 } from 'lucide-react';
 import { useState, useEffect } from 'react';
 
-const gym1 = '/gym1.jpg';
-const gym2 = '/gym2.jpg';
-const gym3 = '/gym3.jpg';
-const gym4 = '/gym4.jpg';
-const gym5 = '/gym5.jpg';
-const gym6 = '/gym6.jpg';
-const gym7 = '/gym7.jpg';
-const muscle = '/muscle.jpg';
+const gym1 = 'https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=1470&auto=format&fit=crop';
+const gym2 = 'https://images.unsplash.com/photo-1599058917212-d750089bc07e?q=80&w=1469&auto=format&fit=crop';
+const gym3 = 'https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80&w=1470&auto=format&fit=crop';
+const gym4 = 'https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?q=80&w=1470&auto=format&fit=crop';
+const gym5 = 'https://images.unsplash.com/photo-1540497077202-7c8a3999166f?q=80&w=1470&auto=format&fit=crop';
+const gym6 = 'https://images.unsplash.com/photo-1574680096145-d05b474e2155?q=80&w=1470&auto=format&fit=crop';
+const gym7 = 'https://images.unsplash.com/photo-1558611848-73f7eb4001a1?q=80&w=1471&auto=format&fit=crop';
+const muscle = 'https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?q=80&w=1470&auto=format&fit=crop';
+const gym8 = 'https://images.unsplash.com/photo-1576678927484-cc907957088c?q=80&w=1470&auto=format&fit=crop';
+const dietImg = 'https://images.unsplash.com/photo-1512621776951-a57141f2eefd?q=80&w=1470&auto=format&fit=crop';
+const fatLossImg = 'https://images.unsplash.com/photo-1517838277536-f5f99be501cd?q=80&w=1470&auto=format&fit=crop';
+
+// Premium dark-themed gallery images (Verified Gym Images)
+const gal1 = 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?q=80&w=1470&auto=format&fit=crop';
+const gal2 = 'https://images.unsplash.com/photo-1554244933-d876deb6b2ff?q=80&w=1470&auto=format&fit=crop';
+const gal3 = 'https://images.unsplash.com/photo-1596357395217-80de13130e92?q=80&w=1471&auto=format&fit=crop';
+const gal4 = 'https://images.unsplash.com/photo-1518611012118-696072aa579a?q=80&w=1470&auto=format&fit=crop';
+const gal5 = 'https://images.unsplash.com/photo-1601422407692-ec4eeec1d9b3?q=80&w=1470&auto=format&fit=crop';
+const gal6 = 'https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?q=80&w=1470&auto=format&fit=crop';
 
 // Using absolute paths for the public folder
 const gymPhotos = [
-  gym1,
-  gym2,
-  gym3,
-  gym4,
-  gym5,
-  gym6,
-  gym7,
-  muscle
+  gal1,
+  gal2,
+  gal3,
+  gal4,
+  gal5,
+  gal6
 ];
 
 const WHATSAPP_NUMBER = "918789205796";
@@ -218,7 +227,7 @@ export default function App() {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent" />
               </div>
               <div className="absolute -bottom-8 -right-8 bg-red-600 p-8 rounded-3xl hidden md:block">
-                <h3 className="font-display text-5xl mb-2">15+</h3>
+                <h3 className="font-display text-5xl mb-2">10+</h3>
                 <p className="text-sm font-medium uppercase tracking-wider">Years of<br/>Experience</p>
               </div>
             </motion.div>
@@ -267,9 +276,9 @@ export default function App() {
               { title: "Weight Training", img: gym1, fallback: "" },
               { title: "Cardio Training", img: gym3, fallback: "" },
               { title: "Personal Training", img: gym4, fallback: "" },
-              { title: "Fat Loss Program", img: gym5, fallback: "" },
+              { title: "Fat Loss Program", img: fatLossImg, fallback: "" },
               { title: "Muscle Gain Program", img: muscle, fallback: "" },
-              { title: "Diet Plan", img: gym2, fallback: "" },
+              { title: "Diet Plan", img: dietImg, fallback: "" },
             ].map((service, idx) => (
               <motion.div 
                 key={idx}
